@@ -41,9 +41,9 @@ export class Manager extends BaseEntity {
   @Column('int')
   role_id: number
 
-  @ApiProperty({ example: 'vbxhebhannacdsteeq', description: '登录状态token' })
-  @Column({ type: 'varchar', width: 255, nullable: true })
-  remember_token: string
+  @ApiProperty({ example: 121312232, description: '时间戳' })
+  @Column({ type: 'bigint', nullable: true })
+  expire_time: number
 
   @ApiProperty({ example: 2, description: '账号状态' })
   @Column({

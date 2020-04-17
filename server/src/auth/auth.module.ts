@@ -15,8 +15,8 @@ import { ManagersModule } from 'src/managers/managers.module'
     // PassportModule.register({ defaultStrategy: 'jwt' }),
     PassportModule,
     JwtModule.register({
-      secret: jwtConstants.secret
-      // signOptions: { expiresIn: '7d' }
+      secret: jwtConstants.secret,
+      signOptions: { expiresIn: '120s' }
     })
   ],
   providers: [AuthService, LocalStrategy, JwtStrategy],
